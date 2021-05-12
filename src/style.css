@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+h1,
+p {
+  font-family: Lato;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
+
+.app {
+  width: 100%;
+  margin: auto;
+  box-shadow: 0 2px 6px #555;
+  padding: 0;
+}
+
+.home {
+  background-color: grey;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+@keyframes pep-motion {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-200%);
+  }
+  50% {
+    transform: translateX(300%);
+  }
+  75% {
+    transform: translateY(-200%);
+  }
+  100% {
+    transform: translateY(200%);
+  }
+}
+
+.home h1 {
+  border: 3px solid seagreen;
+  padding: 3px 10px;
+  background-color: white;
+  animation: pep-motion 2s ease reverse;
+  transform: translateX(0);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  background-color: black;
+  color: white;
+ 
+ 
+}
+
+.navbar .logo {
+  text-transform: uppercase;
+  margin-left: 20px;
+}
+
+.navbar .list-items {
+  display: flex;
+  margin-right: 10px;
+}
+
+.navbar .list-item {
+  padding-right: 25px;
+  text-transform: uppercase;
+   color: white;
+}
+
+.menu {
+  display: none;
+}
+
+.products {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.products .card {
+  max-width: 380px;
+  width: 100%;
+  overflow: hidden;
+  height: 517px;
+  box-shadow: 0 0 5px #ccc;
+  padding: 15px;
+  margin: 15px 10px;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  max-height: 340px;
+  display: block;
+  object-fit: cover;
+}
+
+.card .box {
+  margin: 15px 0;
+}
+
+.card .box h3 {
+  text-transform: uppercase;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: lato;
+}
+
+.card .box p {
+  margin: 10px 0;
+  line-height: 1.5;
+  text-overflow: ellipsis;
+  font-family: monospace;
+}
+
+.card .box h4 {
+  color: crimson;
+  font-weight: 700;
+}
+
+.card .box button {
+  border: none;
+  outline: none;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: seagreen;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+  width: 50%;
+}
+
+.card .box button:hover {
+  background-color: green;
+  font-weight: 600;
+}
+
+.details {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+
+.details .img-container {
+  max-width: 400px;
+  width: 100%;
+  height: 450px;
+  margin: 20px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.details .img-container:hover {
+  background-size: 150%;
+  border: 1px solid #ddd;
+  cursor: zoom-in;
+}
+
+.box-details {
+  max-width: 500px;
+  width: 100%;
+  margin: 20px;
+}
+
+.box-details h2 {
+  text-transform: uppercase;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: lato;
+}
+
+.box-details h3 {
+  color: crimson;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.box-details p {
+  font-style: italic;
+  color: black;
+}
+
+.box-details button {
+  border: 1px solid #555;
+  outline: none;
+  background: #555;
+  cursor: pointer;
+  margin-right: 5px;
+  margin-top: 10px;
+  color: 89 white;
+}
+
+.colors button,
+.sizes button {
+  width: 35px;
+  height: 30px;
+  color: white;
+}
+
+.box-details p {
+  line-height: 1.5;
+  opacity: 0.8;
+  margin: 10px 0;
+}
+
+.box-details .thumbs {
+  display: flex;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.box-details .thumbs img {
+  width: 40px;
+  margin: 20px;
+  overflow: hidden;
+  border: 1px solid black;
+}
+
+.box-details .cart-btn {
+  width: 100%;
+  padding: 10px 0;
+  text-transform: uppercase;
+  color: white;
+}
+
+@media (max-width: 700px) {
+  nav {
+    justify-content: space-between;
+    overflow: none;
+  }
+  nav ul {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    align-items: center;
+    opacity: 0.98;
+    z-index: 99;
+    transition: 0.5s ease-in;
+  }
+
+  .menu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .details {
+    padding: 0;
+  }
+
+  .box-details h2 {
+    font-size: 1.5rem;
+  }
+
+  .box-details p {
+    font-size: 13px;
+  }
+  .box-details .thumbs img {
+    width: 40px;
+  }
+  .details .img-container {
+    height: 350px;
+  }
+}
