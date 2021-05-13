@@ -1,3 +1,3 @@
-# react-46kpwv
+# Jersey-Store
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/react-46kpwv)
+Mimics an actual shopping site and gives it gives you the option to get more information about each item.
