@@ -90,6 +90,7 @@ li {
 
 .menu {
   display: none;
+  cursor: pointer;
 }
 
 .products {
